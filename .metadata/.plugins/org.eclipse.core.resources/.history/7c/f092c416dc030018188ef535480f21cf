@@ -1,0 +1,28 @@
+package com.company.rewardsplus.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.company.rewardsplus.model.SampleModel;
+
+@Controller
+public class SampleController {
+	
+	SampleModel samplemodel = new SampleModel();
+
+	@RequestMapping("/index")
+	public String index(@RequestParam(value="name",required=false,defaultValue="Praveen") String name,Model model){
+		samplemodel.setName(name);
+		model.addAttribute("name",samplemodel.getName());
+		return "index";		
+	}
+	
+	@RequestMapping("/regconfirmation")
+	public String regconfirmation(String fName, String lName, String pNumber, String email, Model model){
+		samplemodel.setfName(fName);
+		model.addAttribute("fName",samplemodel.getfName());
+		return "regconfirmation";		
+	}
+}	

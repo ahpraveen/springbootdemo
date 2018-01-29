@@ -1,0 +1,44 @@
+package com.company.rewardsplus.model;
+
+public class CustomerInfo {
+
+	private String lName;
+	private String fName;
+	private long pNumber;
+	private String email;
+	
+	
+	public void setlName(String strlName){
+		this.lName = strlName;
+	}
+	
+	public String getlName(){
+		return this.lName;
+	}
+	
+	public void setfName(String firstName){
+		this.fName = firstName;
+	}
+	
+	public String getfName(){
+		return this.fName;
+	}
+	
+	public void setMNumber(long dblpNumber){
+		this.pNumber = dblpNumber;
+	}
+	
+	public long getMNumber(){
+		return this.pNumber;
+	}
+	
+	public void setEmail(String strEmail){
+		this.email = strEmail;
+	}
+	
+	public String getEmail(){
+		return this.email;
+	}
+	
+	
+}

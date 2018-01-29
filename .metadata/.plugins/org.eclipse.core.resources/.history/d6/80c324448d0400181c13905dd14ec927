@@ -1,0 +1,25 @@
+package com.company.rewardsplus.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.company.rewardsplus.model.CustomerInfo;
+
+@Controller
+public class RewardsPlusController {
+	
+	@GetMapping("/signup")
+	public String signupForm(Model model){
+		model.addAttribute("customerinfo", new CustomerInfo());
+		return "signup";		
+	}
+	
+	@PostMapping("/signup")
+	public String signupSubmit(@ModelAttribute CustomerInfo customerinfo){
+		return "confirmation";
+	}
+
+}

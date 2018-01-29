@@ -1,0 +1,34 @@
+package com.example.demo.samplemodel;
+
+public class CustomerInfo {
+
+	private String lName;
+	private String fName;
+	private double mNumber;
+	
+	
+	public void setlName(String strlName){
+		this.lName = strlName;
+	}
+	
+	public String getlName(){
+		return this.lName;
+	}
+	
+	public void setfName(String firstName){
+		this.fName = firstName;
+	}
+	
+	public String getfName(){
+		return this.fName;
+	}
+	
+	public void setMNumber(double dblMNumber){
+		this.mNumber = dblMNumber;
+	}
+	
+	public double getMNumber(){
+		return this.mNumber;
+	}
+	
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Sign up - Rewards+</title>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"></meta>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body{
+background-color:lightgrey;
+}
+div{
+font-family:verdana;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>New Registration</h1>
+<form action="#" th:action="@{/signup}" th:object="${customerinfo}" method="post">
+	<div class="form-group">
+      <label for="firstName">FirstName:</label>
+      <input type="text" class="form-control" id="fname" name="fName" th:field="*{fName}" />
+    </div>
+    <div class="form-group">
+      <label for="lastName">LastName:</label>
+      <input type="text" class="form-control" id="lname" name="lName" th:field="*{lName}" />
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone No:</label>
+      <input type="text" class="form-control" id="pNumber" name="pNumber" th:field="*{pNumber}" />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" name="email" th:field="*{email}" />
+    </div>    
+    <button type="submit" class="btn btn-primary">Sign Up</button>	
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<html>
+<head>
+<title>Home - Rewards+</title>
+</head>
+<body>
+<h1> Welcome to Rewards+ home</h1>
+<a href="./templates/index.html">Click for the index</a>
+</body>
+</html>
