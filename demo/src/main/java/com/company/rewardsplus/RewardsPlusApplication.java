@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.company.rewardsplus;
 
 import java.util.Arrays;
 
@@ -9,10 +9,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class DemoApplication {
+public class RewardsPlusApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(RewardsPlusApplication.class, args);
 	}
 	
 	@Bean

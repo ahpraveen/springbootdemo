@@ -1,11 +1,11 @@
-package com.example.demo.samplecontroller;
+package com.company.rewardsplus.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.demo.samplemodel.SampleModel;
+import com.company.rewardsplus.model.SampleModel;
 
 @Controller
 public class SampleController {
@@ -14,8 +14,9 @@ public class SampleController {
 
 	@RequestMapping("/index")
 	public String index(@RequestParam(value="name",required=false,defaultValue="Praveen") String name,Model model){
-		samplemodel.setName("Viki");
+		samplemodel.setName(name);
 		model.addAttribute("name",samplemodel.getName());
 		return "index";		
-	}
+	}	
+	
 }	
