@@ -1,7 +1,17 @@
 package com.company.rewardsplus.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class CustomerInfo {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer id;
+	
 	private String lName;
 	private String fName;
 	private String pNumber;
