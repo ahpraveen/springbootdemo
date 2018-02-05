@@ -31,6 +31,12 @@ public class RewardsPlusController {
 		return "confirmation";
 	}
 	
+	@GetMapping(path="mycustomer/{id}")
+	public String showCustomerById(@PathVariable("id") Integer id, Model model) {		
+		model.addAttribute("customerinfo", customerinforep.findOne(id));
+		return "customer";
+	}
+	
 	@GetMapping(path="customer/showall")
 	public @ResponseBody Iterable<CustomerInfo> getAllCust() {
 		// This returns a JSON or XML with the users
