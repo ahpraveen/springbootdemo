@@ -18,6 +18,26 @@ public class RewardsPlusController {
 	@Autowired
 	private CustomerInfoRepository customerinforep;
 	
+	@GetMapping("/home")
+	public String getHomePage(){
+		return "home";
+	}
+	
+	@GetMapping("/login")
+	public String getLoginPage(Model model){
+		CustomerInfo customerinfo = new CustomerInfo();
+		model.addAttribute("customerinfo", customerinfo);
+		return "login";
+	}
+	
+	@PostMapping("/welcome")
+	@ResponseBody
+	public String validateLogin(@ModelAttribute("customerinfo") CustomerInfo customerinfo){
+		
+		return "yet to implement";
+		
+	}
+	
 	@GetMapping("/signup")
 	public String signupForm(Model model){
 		CustomerInfo customerinfo = new CustomerInfo();
